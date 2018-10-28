@@ -8,7 +8,7 @@ CONNWIDTH    1              Width used to plot connections
 BUSWIDTH     25             Width used to plot buses
 BUSANGLE     25             Angle used when plotting buses
 NNVISPWRGND  4              Pwr/Gnd netname visibility default flag
-PCBFLAGS     1035           PCB Netlist and ECO options
+PCBFLAGS     1027           PCB Netlist and ECO options
 PINNAMESIZE  70     10      Height and LineWidth used by pin names
 TEXTSIZE     97     10      Height and LineWidth text will be created width
 JOBTIME      0              Amount of time spent on this LOGIC design
@@ -738,8 +738,8 @@ VALID_VIA_TYPE	*USE_CURRENT*
 *SHT*   4 FILTER -1 $$$NONE
 *CAE*        GENERAL PARAMETERS FOR THE SHEET"
 
-SCALE        37.093          Scale of window expansion
-WINDOWCENTER 2360   1989    Point defining the center of the window
+SCALE        4.262          Scale of window expansion
+WINDOWCENTER 3761   2667    Point defining the center of the window
 BITCS0       0              system status bits
 BITCS1       0              system status bits
 BITCS2       0              system status bits
@@ -1814,7 +1814,7 @@ T400   0     0 1 130 14 0 1 170 -30 0 8 PINSHORT
 P-500 10 0 1 -70 10 0 1 0
 
 RF_CORE_CT       32000 32000 70 10 70 10 3 18 0 4 18 0
-TIMESTAMP 2018.10.09.09.39.16
+TIMESTAMP 2018.10.28.09.39.11
 "Default Font"
 "Default Font"
 310 250 0 3 70 10 "Default Font"
@@ -1888,6 +1888,31 @@ T-100  -200  0 0 60 10 0 1 40 30 0 8 PINSHORT
 P-530 10 0 1 -70 10 0 1 0
 T600   -200  0 1 60 10 0 1 40 30 0 8 PINSHORT
 P-530 10 0 1 -70 10 0 1 0
+
+SMA_CON          32000 32000 100 10 100 10 2 1 0 5 0 0
+TIMESTAMP 2018.10.23.11.57.13
+"Default Font"
+"Default Font"
+-240 320 0 4 100 10 "Default Font"
+REF-DES
+-260 300 0 6 100 10 "Default Font"
+PART-TYPE
+CLOSED 5   1   255
+-500  200  
+-500  -200 
+0     -200 
+0     200  
+-500  200  
+T200   0     0 1 140 20 0 1 230 0 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
+T-100  -400  90 1 140 20 0 1 230 0 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
+T-200  -400  90 1 140 20 0 1 230 0 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
+T-300  -400  90 1 140 20 0 1 230 0 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
+T-400  -400  90 1 140 20 0 1 230 0 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
 
 
 *PARTTYPE*   ITEMS
@@ -1976,13 +2001,23 @@ GATE 1 2 0
 1 2 
 
 RF_CORE_CT UND  1   0   0     0
-TIMESTAMP 2018.10.09.09.39.16
+TIMESTAMP 2018.10.28.09.39.10
 GATE 1 4 0
 RF_CORE_CT
 1 0 U 1
 2 0 U 2
 3 0 U 3
 4 0 U 4
+
+SMA_CON UND  1   0   0     0
+TIMESTAMP 2018.10.23.11.57.13
+GATE 1 5 0
+SMA_CON
+1 0 U
+2 0 U
+3 0 U
+4 0 U
+5 0 U
 
 
 
@@ -2013,7 +2048,7 @@ P_Value
 0 60 10 0 1
 1 60 10 0 1
 
-L7           IND_METAL_16PI   1950  6000    0 1 69 10 69 10 3 11 2 0 0 24
+L7           IND_METAL_16PI   2050  6000    0 1 69 10 69 10 3 11 2 0 0 24
 "Default Font"
 "Default Font"
 -10 50 0 0 97 10 0 "Default Font"
@@ -2293,7 +2328,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-L10          L-2012           10000 4850   90 0 69 10 69 10 3 11 2 0 0 26
+L10          L-2012           9600  4850   90 0 69 10 69 10 3 11 2 0 0 26
 "Default Font"
 "Default Font"
 -50 40 0 0 97 10 0 "Default Font"
@@ -2316,7 +2351,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-C9           C-2012           10500 4850    0 0 69 10 69 10 3 11 2 0 1 26
+C9           C-2012           10100 4850    0 0 69 10 69 10 3 11 2 0 1 26
 "Default Font"
 "Default Font"
 90 50 0 0 97 10 0 "Default Font"
@@ -2385,7 +2420,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-CT1          RF_CORE_CT       8450  6000    0 0 70 10 70 10 3 11 4 0 0 18
+CT1          RF_CORE_CT       8050  6000    0 0 70 10 70 10 3 11 4 0 0 18
 "Default Font"
 "Default Font"
 310 250 0 3 70 10 0 "Default Font"
@@ -2404,11 +2439,36 @@ P_Value
 "Vendor" 
 "Geometry.Height" 
 "Value" 
-"PCB DECAL" EFD1820G
+"PCB DECAL" CT-RF-4
 0 60 10 0 1
 1 60 10 0 1
 2 60 10 0 1
 3 60 10 0 1
+
+J2           SMA_CON          10600 6000    0 1 100 10 100 10 2 12 5 0 0 0
+"Default Font"
+"Default Font"
+-240 320 0 4 100 10 0 "Default Font"
+REF-DES
+-260 300 0 6 100 10 0 "Default Font"
+PART-TYPE
+"PCB DECAL" SMA/B_RA
+"Comp" 220
+"COMPCOMMENT" 
+"Desc" 1.25mm Pitch DIP CON, Right Angle 6-Pin
+"ECO" 29
+"Geomerty.Height" 
+"P_Size" 9.25x5.5
+"P_Value" 053048-0610
+"USEINPARTSLIST" YES
+"Value" 053048-0610
+"Vendor" Molex
+"Geometry.Height" 3.5mm
+0 140 20 0 1
+1 140 20 0 1
+2 140 20 0 1
+3 140 20 0 1
+4 140 20 0 1
 
 
 *BUSSES*
@@ -2429,26 +2489,31 @@ P_Value
 @@@O8    GND $GND_SYMS 6900   3500   0 0 0
 @@@O9    GND $GND_SYMS 5500   3500   0 0 0
 @@@O10   FW_CT_AD $OSR_SYMS 4900   4100   0 1 6
-@@@O11   GND $GND_SYMS 10000  4600   0 0 0
-@@@O12   GND $GND_SYMS 10500  4600   0 0 0
-@@@O13   RF_OUT $OSR_SYMS 10550  6000   0 0 6
-@@@O14   GND $GND_SYMS 9400   5500   0 0 0
+@@@O11   GND $GND_SYMS 9600   4600   0 0 0
+@@@O12   GND $GND_SYMS 10100  4600   0 0 0
+@@@O13   RF_OUT $OSR_SYMS 10000  6400   0 0 6
+@@@O14   GND $GND_SYMS 7800   5400   0 0 0
 @@@O15   GND $GND_SYMS 8200   3500   0 0 0
+@@@O16   GND $GND_SYMS 10700  5400   0 0 0
 
 *TIEDOTS*
 
 
 
-@@@D0    1450   6000  
-@@@D1    2450   6000  
-@@@D2    3450   6000  
-@@@D3    4650   6000  
-@@@D4    5650   6000  
-@@@D5    6800   6000  
-@@@D6    5500   4100  
-@@@D7    8200   4100  
-@@@D8    6900   4100  
-@@@D9    6000   4100  
+@@@D0    4650   6000  
+@@@D1    5650   6000  
+@@@D2    6800   6000  
+@@@D3    5500   4100  
+@@@D4    6900   4100  
+@@@D5    6000   4100  
+@@@D6    1450   6000  
+@@@D7    2450   6000  
+@@@D8    3450   6000  
+@@@D9    8200   4100  
+@@@D10   9400   6000  
+@@@D11   10700  5500  
+@@@D12   10800  5500  
+@@@D13   10900  5500  
 
 *CONNECTION*
 
@@ -2482,122 +2547,155 @@ C8.2         @@@O9        2 0
 5500   3600  
 5500   3500  
 L10.2        @@@O11       2 0
-10000  4800  
-10000  4600  
+9600   4800  
+9600   4600  
 C9.2         @@@O12       2 0
-10500  4800  
-10500  4600  
-CT1.4        @@@O14       3 0
-9050   5800  
-9400   5800  
-9400   5500  
+10100  4800  
+10100  4600  
+@@@O14       CT1.3        3 0
+7800   5400  
+7800   5800  
+7950   5800  
 R18.2        @@@O15       2 0
 8200   3700  
 8200   3500  
+J2.2         @@@D11       2 0
+10700  5600  
+10700  5500  
+J2.5         @@@D13       3 0
+11000  5600  
+11000  5500  
+10900  5500  
+@@@D11       @@@O16       2 0
+10700  5500  
+10700  5400  
+J2.3         @@@D12       2 0
+10800  5600  
+10800  5500  
+@@@D12       @@@D11       2 0
+10800  5500  
+10700  5500  
+J2.4         @@@D13       2 0
+10900  5600  
+10900  5500  
+@@@D13       @@@D12       2 0
+10900  5500  
+10800  5500  
 
 *SIGNAL* $$$25834 64 0
-L9.2         @@@D5        2 0
+L9.2         @@@D2        2 0
 6350   6000  
 6800   6000  
-@@@D5        C33.1        2 0
+@@@D2        C33.1        2 0
 6800   6000  
 6800   5500  
-@@@D5        CT1.1        2 0
+@@@D2        CT1.1        2 0
 6800   6000  
-8350   6000  
+7950   6000  
 
 *SIGNAL* $$$25986 64 0
-D1.2         @@@D7        2 0
+D1.2         @@@D9        2 0
 7750   4100  
 8200   4100  
-CT1.3        @@@D7        3 0
-8350   5800  
-8200   5800  
+CT1.4        @@@D9        4 0
+8650   5800  
+9100   5800  
+9100   4100  
 8200   4100  
-@@@D7        R18.1        2 0
+@@@D9        R18.1        2 0
 8200   4100  
 8200   3900  
 
+*SIGNAL* $$$17816 64 0
+L7.2         @@@D7        2 0
+2100   6000  
+2450   6000  
+C24.1        @@@D7        2 0
+2450   5500  
+2450   6000  
+@@@D7        @@@D8        2 0
+2450   6000  
+3450   6000  
+C25.1        @@@D8        3 0
+3450   5500  
+3450   6000  
+3450   6000  
+@@@D8        L8.1         2 0
+3450   6000  
+4000   6000  
+
 *SIGNAL* $$$25025 64 0
-L8.2         @@@D3        2 0
+L8.2         @@@D0        2 0
 4200   6000  
 4650   6000  
-@@@D3        C26.1        2 0
+@@@D0        C26.1        2 0
 4650   6000  
 4650   5500  
-@@@D3        @@@D4        2 0
+@@@D0        @@@D1        2 0
 4650   6000  
 5650   6000  
-@@@D4        C32.1        2 0
+@@@D1        C32.1        2 0
 5650   6000  
 5650   5500  
-@@@D4        L9.1         2 0
+@@@D1        L9.1         2 0
 5650   6000  
 6150   6000  
 
 *SIGNAL* T2_OUT 0 0
-C23.1        @@@D0        2 0
-1450   5500  
-1450   6000  
-@@@D0        L7.1         2 0
-1450   6000  
-1800   6000  
-@@@D0        @@@O1        2 0
-1450   6000  
+@@@O1        @@@D6        2 0
 1250   6000  
-C24.1        @@@D1        2 0
-2450   5500  
-2450   6000  
-@@@D1        L7.2         2 0
-2450   6000  
-2000   6000  
-@@@D1        @@@D2        2 0
-2450   6000  
-3450   6000  
-@@@D2        C25.1        2 0
-3450   6000  
-3450   5500  
-@@@D2        L8.1         2 0
-3450   6000  
-4000   6000  
+1450   6000  
+L7.1         @@@D6        2 0
+1900   6000  
+1450   6000  
+@@@D6        C23.1        2 0
+1450   6000  
+1450   5500  
 
 *SIGNAL* FW_CT_AD 0 0
-R15.2        @@@D9        2 0
+R15.2        @@@D5        2 0
 6250   4100  
 6000   4100  
-@@@D6        C8.1         2 0
+@@@D3        C8.1         2 0
 5500   4100  
 5500   3800  
-@@@D6        @@@O10       2 0
+@@@D3        @@@O10       2 0
 5500   4100  
 4900   4100  
-R16.2        @@@D9        2 0
+R16.2        @@@D5        2 0
 6000   3800  
 6000   4100  
-@@@D9        @@@D6        2 0
+@@@D5        @@@D3        2 0
 6000   4100  
 5500   4100  
 
 *SIGNAL* $$$26612 64 0
 C9.1         L10.1        4 0
-10500  5000  
-10500  5300  
-10000  5300  
-10000  5000  
+10100  5000  
+10100  5300  
+9600   5300  
+9600   5000  
 
 *SIGNAL* RF_OUT 0 0
-CT1.2        @@@O13       2 0
-9050   6000  
-10550  6000  
+CT1.2        @@@D10       2 0
+8650   6000  
+9400   6000  
+J2.1         @@@D10       2 0
+10400  6000  
+9400   6000  
+@@@D10       @@@O13       3 0
+9400   6000  
+9400   6400  
+10000  6400  
 
 *SIGNAL* $$$12251 64 0
-R15.1        @@@D8        2 0
+R15.1        @@@D4        2 0
 6450   4100  
 6900   4100  
-C15.1        @@@D8        2 0
+C15.1        @@@D4        2 0
 6900   3800  
 6900   4100  
-@@@D8        D1.1         2 0
+@@@D4        D1.1         2 0
 6900   4100  
 7350   4100  
 
@@ -2606,14 +2704,14 @@ C15.1        @@@D8        2 0
 
 
 T2_OUT       @@@O1        -730   -20    0 0 80     20     0 0 -1 10 97 "Default Font"
-FW_CT_AD     @@@O10       -830   -40    0 0 910    30     0 0 -1 10 97 "Default Font"
+FW_CT_AD     @@@O10       -830   -40    0 0 1170   40     0 0 -1 10 97 "Default Font"
 RF_OUT       @@@O13       350    -30    0 0 750    40     0 0 -1 10 97 "Default Font"
 
 *SHT*   2 AMP-STAGE1 -1 $$$NONE
 *CAE*        GENERAL PARAMETERS FOR THE SHEET"
 
-SCALE        6.093          Scale of window expansion
-WINDOWCENTER 4289   2924    Point defining the center of the window
+SCALE        5.615          Scale of window expansion
+WINDOWCENTER 3300   2986    Point defining the center of the window
 BITCS0       0              system status bits
 BITCS1       0              system status bits
 BITCS2       0              system status bits
@@ -3130,7 +3228,7 @@ T0     0     0 0 0 0 0 0 0 0 0 8
 P0 0 0 0 0 0 0 0 128
 
 SMA_CON          32000 32000 100 10 100 10 2 1 0 5 0 0
-TIMESTAMP 2018.08.11.07.39.00
+TIMESTAMP 2018.10.23.11.57.13
 "Default Font"
 "Default Font"
 -240 320 0 4 100 10 "Default Font"
@@ -3893,7 +3991,7 @@ Y P +5V
 +5VA P +5VA
 
 SMA_CON UND  1   0   0     0
-TIMESTAMP 2018.08.11.07.39.00
+TIMESTAMP 2018.10.23.11.57.13
 GATE 1 5 0
 SMA_CON
 1 0 U
@@ -4008,14 +4106,14 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-J3           SMA_CON          1000  5200    0 0 97 10 97 10 2 12 5 0 0 0
+J3           SMA_CON          1000  5200    0 0 100 10 100 10 2 12 5 0 0 0
 "Default Font"
 "Default Font"
--240 320 0 4 97 10 0 "Default Font"
+-240 320 0 4 100 10 0 "Default Font"
 REF-DES
--260 300 0 6 97 10 0 "Default Font"
+-260 300 0 6 100 10 0 "Default Font"
 PART-TYPE
-"PCB DECAL" 053048-0610
+"PCB DECAL" SMA/B_RA
 "Comp" 220
 "COMPCOMMENT" 
 "Desc" 1.25mm Pitch DIP CON, Right Angle 6-Pin
@@ -4387,7 +4485,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-TX1          RF-800           10000 6400    0 1 69 10 69 10 3 11 5 0 0 18
+TX1          RF-800           10100 6000    0 3 69 10 69 10 3 11 5 0 0 18
 "Default Font"
 "Default Font"
 180 90 0 0 69 10 0 "Default Font"
@@ -4547,12 +4645,12 @@ Value
 @@@O2    GND $GND_SYMS 600    4600   0 0 0
 @@@O3    GND $GND_SYMS 2800   4600   0 0 0
 @@@O4    GND $GND_SYMS 4300   4600   0 0 0
-@@@O5    +5V $OSR_SYMS 3300   6800   0 0 8
+@@@O5    +12V $OSR_SYMS 3300   6800   0 0 8
 @@@O6    GND $GND_SYMS 5800   6750   0 0 0
-@@@O7    +5V $OSR_SYMS 5800   7500   0 0 8
+@@@O7    +12V $OSR_SYMS 5800   7500   0 0 8
 @@@O8    GND $GND_SYMS 8100   5550   0 0 0
-@@@O9    T1_OUT+ $OSR_SYMS 10500  6300   0 0 6
-@@@O10   T1_OUT- $OSR_SYMS 10500  6100   0 0 6
+@@@O9    T1_OUT+ $OSR_SYMS 10800  6100   0 0 6
+@@@O10   T1_OUT- $OSR_SYMS 10800  6300   0 0 6
 @@@O11   GND $GND_SYMS 3300   5700   0 0 0
 @@@O12   GND $GND_SYMS 6400   4700   0 0 0
 @@@O13   GND $GND_SYMS 9200   5800   0 0 0
@@ -4629,10 +4727,10 @@ C2.2         @@@O11       2 0
 Q1.3         @@@O12       2 0
 6400   4900  
 6400   4700  
-@@@O13       TX1.5        3 0
-9200   5800  
+TX1.4        @@@O13       3 0
+9500   6100  
 9200   6100  
-9400   6100  
+9200   5800  
 
 *SIGNAL* $$$18423 64 0
 R21.2        @@@D0        2 0
@@ -4743,25 +4841,25 @@ L11.2        @@@D10       2 0
 
 *SIGNAL* T1_OUT+ 0 0
 @@@O9        TX1.1        2 0
-10500  6300  
-10100  6300  
+10800  6100  
+10200  6100  
 
 *SIGNAL* $$$21329 64 0
-L3.2         @@@D16       2 0
-8750   6300  
-9100   6300  
-@@@D16       C34.1        3 0
-9100   6300  
-9100   6750  
+C34.1        @@@D16       3 0
 8750   6750  
-@@@D16       TX1.4        2 0
+9100   6750  
 9100   6300  
-9400   6300  
+@@@D16       L3.2         2 0
+9100   6300  
+8750   6300  
+@@@D16       TX1.5        2 0
+9100   6300  
+9500   6300  
 
 *SIGNAL* T1_OUT- 0 0
 @@@O10       TX1.3        2 0
-10500  6100  
-10100  6100  
+10800  6300  
+10200  6300  
 
 *SIGNAL* $$$25755 64 0
 VR1.2        @@@D12       4 0
@@ -4776,7 +4874,7 @@ VR1.3        @@@D12       2 0
 4300   6000  
 4300   5700  
 
-*SIGNAL* +5V 0 0
+*SIGNAL* +12V 0 0
 VR1.1        @@@D13       3 0
 4300   6400  
 4300   6600  
@@ -4802,16 +4900,16 @@ C2.1         @@@D13       2 0
 
 
 
-+5V          @@@O5        90     130    0 1 -150   130    0 3 -1 10 97 "Default Font"
-+5V          @@@O7        100    120    0 1 -150   120    0 3 -1 10 97 "Default Font"
++12V         @@@O5        90     130    0 1 -150   130    0 3 -1 10 97 "Default Font"
++12V         @@@O7        100    120    0 1 -150   120    0 3 -1 10 97 "Default Font"
 T1_OUT+      @@@O9        340    -30    0 0 -200   30     0 2 -1 10 97 "Default Font"
 T1_OUT-      @@@O10       330    -40    0 0 -190   40     0 2 -1 10 97 "Default Font"
 
 *SHT*   1 INTERFACE -1 $$$NONE
 *CAE*        GENERAL PARAMETERS FOR THE SHEET"
 
-SCALE        6.512          Scale of window expansion
-WINDOWCENTER 3710   1743    Point defining the center of the window
+SCALE        6.624          Scale of window expansion
+WINDOWCENTER 1110   426     Point defining the center of the window
 BITCS0       0              system status bits
 BITCS1       0              system status bits
 BITCS2       0              system status bits
@@ -5775,8 +5873,8 @@ P-520 0 0 1 -80 0 0 1 0
 T-400  100   0 0 140 20 0 1 150 -40 0 8 PIN
 P-520 0 0 1 -80 0 0 1 0
 
-KA358A           32000 32000 70 10 70 10 2 15 0 8 0 0
-TIMESTAMP 2018.10.09.08.19.36
+KA358A           32000 32000 70 10 70 10 2 15 0 8 8 0
+TIMESTAMP 2018.10.23.10.49.00
 "Default Font"
 "Default Font"
 -10 330 0 4 97 10 "Default Font"
@@ -5856,8 +5954,8 @@ P-530 10 0 1 -70 10 0 1 0
 T300   100   0 1 60 10 0 1 140 10 0 8 PINSHORT
 P-530 10 0 1 -70 10 0 1 0
 
-KDS226           32000 32000 100 10 100 10 2 9 0 3 10 0
-TIMESTAMP 2018.10.09.09.15.58
+KDS226           32000 32000 100 10 100 10 2 9 0 3 8 0
+TIMESTAMP 2018.10.23.11.07.21
 "Default Font"
 "Default Font"
 -10 230 0 4 100 10 "Default Font"
@@ -5906,6 +6004,27 @@ P-520 0 0 1 -80 0 0 1 0
 T-400  -100  0 0 140 10 0 1 180 -60 90 8 PIN
 P-520 0 0 1 -80 0 0 1 0
 T-400  100   0 0 140 20 0 1 150 -40 0 8 PIN
+P-520 0 0 1 -80 0 0 1 0
+
+HOLE4.0          32000 32000 97 10 97 10 4 1 0 1 0 0
+TIMESTAMP 2018.10.23.12.59.12
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 "Default Font"
+REF-DES
+100 -40 0 6 97 10 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 "Default Font"
+*
+100 -240 0 6 97 10 "Default Font"
+*
+CLOSED 5   10  255
+0     0    
+200   0    
+200   200  
+0     200  
+0     0    
+T400   100   0 1 140 20 0 1 230 0 0 8 PIN
 P-520 0 0 1 -80 0 0 1 0
 
 
@@ -5992,7 +6111,7 @@ U3
 1 0 U
 
 KA358A UND  1   0   0     0
-TIMESTAMP 2018.10.09.08.19.36
+TIMESTAMP 2018.10.23.10.48.59
 GATE 1 8 0
 KA358A
 1 0 U OUT1
@@ -6005,11 +6124,17 @@ KA358A
 8 0 U VCC
 
 KDS226 UND  1   0   0     0
-TIMESTAMP 2018.10.09.09.15.58
+TIMESTAMP 2018.10.23.11.07.20
 GATE 1 3 0
 KDS226
 3 0 U
 2 0 U
+1 0 U
+
+HOLE4.0 POT  1   0   0     0
+TIMESTAMP 2018.10.23.12.59.12
+GATE 1 1 0
+HOLE4.0
 1 0 U
 
 
@@ -6245,7 +6370,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-U2           KA358A           6600  3400    0 1 69 10 69 10 2 12 8 0 0 8
+U2           KA358A           6600  3400    0 1 70 10 70 10 2 12 8 0 0 8
 "Default Font"
 "Default Font"
 -10 330 0 4 97 10 0 "Default Font"
@@ -6262,7 +6387,7 @@ PART-TYPE
 "USEINPARTLIST" YES
 "Value" LM2735XMF
 "Vendor" TI
-"PCB DECAL" LM2735XMF
+"PCB DECAL" IC/SO08-1
 "USEINPARTSLIST" YES
 0 60 10 0 1
 1 60 10 0 1
@@ -6388,7 +6513,7 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-U4           KA358A           6600  6300    0 1 69 10 69 10 2 12 8 0 0 8
+U4           KA358A           6600  6300    0 1 70 10 70 10 2 12 8 0 0 8
 "Default Font"
 "Default Font"
 -10 330 0 4 97 10 0 "Default Font"
@@ -6405,7 +6530,7 @@ PART-TYPE
 "USEINPARTLIST" YES
 "Value" LM2735XMF
 "Vendor" TI
-"PCB DECAL" LM2735XMF
+"PCB DECAL" IC/SO08-1
 "USEINPARTSLIST" YES
 0 60 10 0 1
 1 60 10 0 1
@@ -6439,12 +6564,12 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
-D4           KDS226           9050  3900   90 2 100 10 100 10 2 13 3 0 0 10
+D4           KDS226           9050  3900   90 2 100 10 100 10 2 13 3 0 0 8
 "Default Font"
 "Default Font"
--10 230 0 4 100 10 0 "Default Font"
+40 -320 90 4 100 10 0 "Default Font"
 REF-DES
--20 310 0 6 97 10 0 "Default Font"
+70 -450 90 5 97 10 0 "Default Font"
 PART-TYPE
 "Comp" 180
 "COMPCOMMENT" 
@@ -6458,7 +6583,7 @@ PART-TYPE
 "Vendor" NXP
 "Geometry.Height" 1.10mm
 "USEINPARTSLIST" YES
-"PCB DECAL" PMBT2222
+"PCB DECAL" KDS226-SOT23
 0 140 20 0 1
 1 140 10 0 1
 2 140 20 0 1
@@ -6509,6 +6634,150 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
+P1           HOLE4.0          700   4800    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
+P2           HOLE4.0          700   4100    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
+P3           HOLE4.0          700   3400    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
+P4           HOLE4.0          700   2600    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
+P5           HOLE4.0          1700  2750    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
+P6           HOLE4.0          1700  1950    0 0 97 10 97 10 4 11 1 0 0 0
+"Default Font"
+"Default Font"
+100 240 0 4 97 10 0 "Default Font"
+REF-DES
+100 -40 0 6 97 10 0 "Default Font"
+PART-TYPE
+100 -140 0 6 97 10 0 "Default Font"
+*
+100 -240 0 6 97 10 0 "Default Font"
+*
+"PCB DECAL" HOLE4.0
+"USEINPARTSLIST" NO
+"COMPCOMMENT" 
+"P_value" 
+"P_size" 2.0 Pie
+"Comp" 
+"Vendor" 
+"Value" 
+"Desc" PCB Assy Hole
+"Geometry.Height" 
+"ECO" 36
+0 140 20 0 1
+
 
 *BUSSES*
 
@@ -6518,7 +6787,7 @@ P_Value
 
 
 @@@O0    GND $GND_SYMS 2000   5600   0 0 0
-@@@O1    +5V $OSR_SYMS 3700   6100   0 0 8
+@@@O1    +12V $OSR_SYMS 3700   6100   0 0 8
 @@@O2    GND $GND_SYMS 3000   5600   0 0 0
 @@@O3    J1-4 $OSR_SYMS 3400   6600   0 1 5
 @@@O4    J1-1 $OSR_SYMS 1800   6700   0 0 5
@@ -6550,7 +6819,7 @@ P_Value
 @@@O30   +12V $OSR_SYMS 5400   7300   0 0 8
 @@@O31   GND $GND_SYMS 5400   6600   0 0 0
 @@@O32   GND $GND_SYMS 9550   4300   0 0 0
-@@@O33   +5V $OSR_SYMS 8950   4600   0 0 8
+@@@O33   +12V $OSR_SYMS 8950   4600   0 0 8
 @@@O34   GND $GND_SYMS 4900   2900   0 0 0
 
 *TIEDOTS*
@@ -6780,7 +7049,7 @@ U2.2         @@@D11       3 0
 7550   3800  
 7750   3800  
 
-*SIGNAL* +5V 0 0
+*SIGNAL* +12V 0 0
 J1.16        @@@D2        2 0
 2900   6000  
 3700   6000  
@@ -6797,11 +7066,6 @@ J1.18        @@@D3        2 0
 3700   5900  
 3700   5800  
 2900   5800  
-D4.1         @@@O33       2 0
-8950   4300  
-8950   4600  
-
-*SIGNAL* +12V 0 0
 U2.8         @@@D12       3 0
 6300   3500  
 6100   3500  
@@ -6823,6 +7087,9 @@ BC1.1        @@@D19       2 0
 @@@D19       @@@O30       2 0
 5400   7100  
 5400   7300  
+D4.1         @@@O33       2 0
+8950   4300  
+8950   4600  
 
 *SIGNAL* $$$9154 64 0
 R13.2        @@@D14       2 0
@@ -6897,7 +7164,7 @@ U4.3         @@@D17       2 0
 
 
 
-+5V          @@@O1        -100   110    0 0 60     120    0 2 -1 10 97 "Default Font"
++12V         @@@O1        -100   110    0 0 60     120    0 2 -1 10 97 "Default Font"
 J1-4         @@@O3        360    0      0 0 -520   20     0 3 -1 10 97 "Default Font"
 J1-1         @@@O4        -360   0      0 1 370    10     0 3 -1 10 97 "Default Font"
 J1-3         @@@O5        -360   0      0 1 370    10     0 3 -1 10 97 "Default Font"
@@ -6914,13 +7181,13 @@ J1-4         @@@O23       330    -30    0 0 -590   40     0 0 -1 10 97 "Default 
 PWR_IS_AD    @@@O27       330    -30    0 0 -510   60     0 0 -1 10 100 "Default Font"
 PWR_IS_AD_OUT @@@O28       -1160  -30    0 0 1190   60     0 0 -1 10 100 "Default Font"
 +12V         @@@O30       -130   120    0 0 120    120    0 0 -1 10 97 "Default Font"
-+5V          @@@O33       -110   140    0 0 80     120    0 0 -1 10 100 "Default Font"
++12V         @@@O33       -110   140    0 0 80     120    0 0 -1 10 97 "Default Font"
 
 *SHT*   3 AMP-STAGE2 -1 $$$NONE
 *CAE*        GENERAL PARAMETERS FOR THE SHEET"
 
-SCALE        13.496          Scale of window expansion
-WINDOWCENTER 5362   1273    Point defining the center of the window
+SCALE        4.195          Scale of window expansion
+WINDOWCENTER 4319   2711    Point defining the center of the window
 BITCS0       0              system status bits
 BITCS1       0              system status bits
 BITCS2       0              system status bits
@@ -8082,7 +8349,7 @@ T-100  0     90 0 0 0 0 1 0 -100 0 8 P50
 P-520 0 0 1 -80 0 0 1 0
 
 ZXCT1110         32000 32000 70 10 70 10 2 1 0 5 0 0
-TIMESTAMP 2018.10.09.07.53.32
+TIMESTAMP 2018.10.23.11.12.03
 "Default Font"
 "Default Font"
 0 310 0 4 97 10 "Default Font"
@@ -8203,6 +8470,36 @@ P-500 10 0 1 -70 10 0 1 0
 T400   0     0 1 130 14 0 1 170 -30 0 8 PINSHORT
 P-500 10 0 1 -70 10 0 1 0
 
+IND_30PI_SMD     32000 32000 70 10 70 10 3 5 0 2 24 0
+TIMESTAMP 2018.10.23.13.11.35
+"Default Font"
+"Default Font"
+-50 40 0 0 97 10 "Default Font"
+REF-DES
+120 -60 0 0 70 10 "Default Font"
+PART-TYPE
+-120 -110 0 0 97 10 "Default Font"
+P_Value
+OPEN   2   1   255
+40    -20   3109  2250  0     -26   48    22   
+0     0    
+OPEN   2   1   255
+100   0     41    2250  52    -26   100   22   
+60    -20  
+OPEN   2   1   255
+60    -20   2966  3069  28    -22   72    22   
+40    -20  
+OPEN   2   1   255
+0     0    
+0     0    
+OPEN   2   1   255
+100   0    
+100   0    
+T150   0     0 1 0 0 0 1 0 -100 0 8 P50
+P-100 0 0 1 -100 0 0 1 0
+T-50   0     0 0 0 0 0 1 0 -100 0 8 P50
+P-100 0 0 1 -100 0 0 1 0
+
 
 *PARTTYPE*   ITEMS
 
@@ -8303,7 +8600,7 @@ VR
 0 0 U
 
 ZXCT1110 UND  1   0   0     0
-TIMESTAMP 2018.10.09.07.53.32
+TIMESTAMP 2018.10.23.11.12.02
 GATE 1 5 0
 ZXCT1110
 1 0 U NC
@@ -8333,6 +8630,13 @@ GATE 1 2 0
 2 0 U
 1 0 U
 1 2 
+
+IND_30PI_SMD UND  1   0   0     0
+TIMESTAMP 2018.10.23.13.11.35
+GATE 1 2 0
+IND_30PI_SMD
+1 0 B 1
+2 0 B 2
 
 
 
@@ -8485,17 +8789,15 @@ P_Value
 0 60 10 0 1
 1 60 10 0 1
 
-L6           IND_14PI         9150  4650   90 0 69 10 69 10 4 11 2 0 0 24
+L6           IND_30PI_SMD     9150  4650   90 0 70 10 70 10 3 11 2 0 0 24
 "Default Font"
 "Default Font"
-130 -220 90 0 97 10 0 "Default Font"
+-50 40 0 0 97 10 0 "Default Font"
 REF-DES
-40 -530 90 0 97 10 0 "Default Font"
+120 -60 0 0 70 10 0 "Default Font"
 PART-TYPE
--50 -140 90 0 97 10 3 "Default Font"
+-120 -110 0 0 97 10 3 "Default Font"
 P_Value
-0 -636 0 2 97 10 0 "Default Font"
-Value
 "COMPCOMMENT" 
 "Comp" ?
 "ECO" 33
@@ -8506,7 +8808,7 @@ Value
 "Vendor" 
 "Geometry.Height" 1.00mm
 "Value" ?
-"PCB DECAL" IND_14PI
+"PCB DECAL" L17D_SMD
 0 0 0 0 1
 1 0 0 0 1
 
@@ -8834,12 +9136,12 @@ P_Value
 1 0 0 0 1
 2 0 0 0 1
 
-U1           ZXCT1110         8150  7100   90 2 69 10 69 10 2 12 5 0 0 0
+U1           ZXCT1110         8150  7100   90 2 70 10 70 10 2 12 5 0 0 0
 "Default Font"
 "Default Font"
--20 -330 90 4 97 10 0 "Default Font"
+0 310 0 4 97 10 0 "Default Font"
 REF-DES
-20 -510 90 5 97 10 0 "Default Font"
+0 290 0 6 97 10 0 "Default Font"
 PART-TYPE
 "Comp" 2850
 "COMPCOMMENT" 
@@ -8851,7 +9153,7 @@ PART-TYPE
 "USEINPARTLIST" YES
 "Value" LM2735XMF
 "Vendor" TI
-"PCB DECAL" LM2735XMF
+"PCB DECAL" TSOT23-5P
 "USEINPARTSLIST" YES
 0 60 10 0 1
 1 60 10 0 1
@@ -9098,6 +9400,29 @@ P_Value
 0 0 0 0 1
 1 0 0 0 1
 
+R28          DIP_2W           8200  4950    0 1 69 10 69 10 3 11 2 0 0 24
+"Default Font"
+"Default Font"
+-30 120 0 0 97 10 0 "Default Font"
+REF-DES
+-130 -130 0 0 97 10 0 "Default Font"
+PART-TYPE
+-30 40 0 0 97 10 3 "Default Font"
+P_Value
+"P_Value" 0.01
+"P_Size" 2.0x1.25
+"PCB DECAL" R-DIP2W_28PITCH
+"Value" 0
+"USEINPARTSLIST" YES
+"Vendor" WALSIN
+"Geometry.Height" 1.00mm
+"Desc" RES SMD ?K OHM 1% 1/16W 0805
+"ECO" 50
+"Comp" 10
+"COMPCOMMENT" 
+0 0 0 0 1
+1 0 0 0 1
+
 
 *BUSSES*
 
@@ -9123,6 +9448,7 @@ P_Value
 @@@O14   GND $GND_SYMS 2700   3600   0 0 0
 @@@O15   GND $GND_SYMS 7950   7900   0 0 0
 @@@O16   PWR_IS_AD $OSR_SYMS 8850   7500   0 0 6
+@@@O17   GND $GND_SYMS 10900  3500   0 0 0
 
 *TIEDOTS*
 
@@ -9147,14 +9473,16 @@ P_Value
 @@@D16   3100   3900  
 @@@D17   5050   3900  
 @@@D18   7750   5400  
-@@@D19   9150   2900  
-@@@D20   7750   5800  
-@@@D21   8550   5400  
-@@@D22   8550   5800  
-@@@D23   7750   6300  
-@@@D24   8550   6300  
-@@@D25   8150   8000  
-@@@D26   8250   7500  
+@@@D19   7750   5800  
+@@@D20   8550   5400  
+@@@D21   8550   5800  
+@@@D22   7750   6300  
+@@@D23   8550   6300  
+@@@D24   8150   8000  
+@@@D25   8250   7500  
+@@@D26   8550   5400  
+@@@D27   7750   5400  
+@@@D28   10550  3700  
 
 *CONNECTION*
 
@@ -9163,6 +9491,14 @@ P_Value
 C17.2        @@@O2        2 0
 7050   4700  
 7050   4400  
+C19.2        @@@D9        3 0
+9950   3400  
+10350  3400  
+10350  3700  
+@@@D9        C20.2        3 0
+10350  3700  
+10350  4000  
+9950   4000  
 C39.2        @@@O5        2 0
 4050   1100  
 4050   800   
@@ -9189,17 +9525,28 @@ VR3.0        @@@O14       3 0
 2550   3800  
 2700   3800  
 2700   3600  
-U1.2         @@@D25       2 0
+@@@D9        @@@D28       2 0
+10350  3700  
+10550  3700  
+U1.2         @@@D24       2 0
 8150   7400  
 8150   8000  
-@@@D25       R5.1         3 0
+@@@D24       R5.1         3 0
 8150   8000  
 8250   8000  
 8250   7900  
-@@@D25       @@@O15       3 0
+@@@D24       @@@O15       3 0
 8150   8000  
 7950   8000  
 7950   7900  
+@@@D28       TX2.5        3 0
+10550  3700  
+10550  2700  
+10050  2700  
+@@@D28       @@@O17       3 0
+10550  3700  
+10900  3700  
+10900  3500  
 
 *SIGNAL* $$$22406 64 0
 C102.1       @@@D0        4 0
@@ -9298,45 +9645,11 @@ C106.1       @@@D5        2 0
 8250   2100  
 
 *SIGNAL* $$$23031 64 0
-@@@D8        @@@D19       2 0
-9150   3700  
-9150   2900  
-C20.1        @@@D7        3 0
-9650   4000  
-9350   4000  
-9350   3700  
-@@@D7        C19.1        3 0
-9350   3700  
-9350   3400  
-9650   3400  
-@@@D7        @@@D8        2 0
-9350   3700  
-9150   3700  
-@@@D8        L6.2         2 0
-9150   3700  
-9150   4600  
-@@@D19       L4.2         2 0
-9150   2900  
-8450   2900  
-@@@D19       TX2.3        3 0
-9150   2900  
-9150   2700  
+TX2.3        L4.2         4 0
 9350   2700  
-
-*SIGNAL* $$$802 64 0
-C19.2        @@@D9        3 0
-9950   3400  
-10350  3400  
-10350  3700  
-@@@D9        C20.2        3 0
-10350  3700  
-10350  4000  
-9950   4000  
-@@@D9        TX2.5        4 0
-10350  3700  
-10550  3700  
-10550  2700  
-10050  2700  
+9200   2700  
+9200   2900  
+8450   2900  
 
 *SIGNAL* $$$24080 64 0
 VR2.1        R27.2        2 0
@@ -9379,23 +9692,52 @@ R10.2        @@@D18       2 0
 @@@D18       @@@D6        2 0
 7750   5400  
 7050   5400  
-C28.1        @@@D20       2 0
+C28.1        @@@D19       2 0
 8050   5800  
 7750   5800  
-@@@D20       @@@D18       2 0
+@@@D19       @@@D27       2 0
 7750   5800  
 7750   5400  
-D3.2         @@@D23       2 0
+D3.2         @@@D22       2 0
 7950   6300  
 7750   6300  
-U1.4         @@@D23       4 0
+U1.4         @@@D22       4 0
 8050   6800  
 8050   6700  
 7750   6700  
 7750   6300  
-@@@D23       @@@D20       2 0
+@@@D22       @@@D19       2 0
 7750   6300  
 7750   5800  
+R28.2        @@@D27       3 0
+8050   4950  
+7750   4950  
+7750   5400  
+@@@D27       @@@D18       2 0
+7750   5400  
+7750   5400  
+
+*SIGNAL* $$$21379 64 0
+@@@D8        TX2.2        5 0
+9150   3700  
+9150   3250  
+9100   3250  
+9100   2600  
+9350   2600  
+C20.1        @@@D7        3 0
+9650   4000  
+9350   4000  
+9350   3700  
+@@@D7        C19.1        3 0
+9350   3700  
+9350   3400  
+9650   3400  
+@@@D7        @@@D8        2 0
+9350   3700  
+9150   3700  
+@@@D8        L6.2         2 0
+9150   3700  
+9150   4600  
 
 *SIGNAL* T2_OUT 0 0
 TX2.4        @@@O4        2 0
@@ -9433,44 +9775,51 @@ C11.1        @@@D15       2 0
 *SIGNAL* $$$855 64 0
 L5.2         TX2.1        4 0
 8450   2100  
-9150   2100  
-9150   2500  
+9200   2100  
+9200   2500  
 9350   2500  
 
 *SIGNAL* $$$23732 64 0
-D3.1         @@@D24       2 0
+D3.1         @@@D23       2 0
 8350   6300  
 8550   6300  
-R10.1        @@@D21       2 0
+R10.1        @@@D20       2 0
 8250   5400  
 8550   5400  
-@@@D21       L6.1         3 0
+@@@D20       L6.1         3 0
 8550   5400  
 9150   5400  
 9150   4800  
-@@@D21       @@@D22       2 0
+@@@D20       @@@D26       2 0
 8550   5400  
-8550   5800  
-@@@D22       C28.2        2 0
+8550   5400  
+@@@D21       C28.2        2 0
 8550   5800  
 8250   5800  
-U1.5         @@@D24       4 0
+U1.5         @@@D23       4 0
 8250   6800  
 8250   6700  
 8550   6700  
 8550   6300  
-@@@D24       @@@D22       2 0
+@@@D23       @@@D21       2 0
 8550   6300  
+8550   5800  
+R28.1        @@@D26       3 0
+8250   4950  
+8550   4950  
+8550   5400  
+@@@D26       @@@D21       2 0
+8550   5400  
 8550   5800  
 
 *SIGNAL* PWR_IS_AD 0 0
-R5.2         @@@D26       2 0
+R5.2         @@@D25       2 0
 8250   7700  
 8250   7500  
-@@@D26       U1.3         2 0
+@@@D25       U1.3         2 0
 8250   7500  
 8250   7400  
-@@@D26       @@@O16       2 0
+@@@D25       @@@O16       2 0
 8250   7500  
 8850   7500  
 
