@@ -22,7 +22,6 @@
 
 /* USER CODE BEGIN 0 */
 
-/* Arvid 2020.02.14 : 50KHz Timer Setup */
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim3;

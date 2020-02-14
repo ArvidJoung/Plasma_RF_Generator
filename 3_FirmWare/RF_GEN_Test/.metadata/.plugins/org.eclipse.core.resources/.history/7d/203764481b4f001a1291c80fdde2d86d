@@ -98,10 +98,7 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM16_Init();
   MX_I2C1_Init();
-
   /* USER CODE BEGIN 2 */
-
-  HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);	/* Arvid 2020.02.14 : 50KHz Timer3 Start */
 
   /* USER CODE END 2 */
 
