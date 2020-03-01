@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\WORK\Project\3_Plasma_RF_Generator\3_FirmWare\RF_GEN_Test"/>
 		<item value="C:\Backup\Plasma_RF_Generator\3_FirmWare\RF_GEN_Test"/>
 	</list>
 </section>
