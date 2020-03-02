@@ -893,3 +893,6 @@ arm-none-eabi-size "RF-GEN_V1.0_20190429.elf"
    text	   data	    bss	    dec	    hex	filename
   14800	     12	   2036	  16848	   41d0	RF-GEN_V1.0_20190429.elf
  
+22:51:35 **** Build of configuration Debug for project RF-GEN_V1.0_20190429 ****
+make all 
+make: Nothing to be done for 'all'.
